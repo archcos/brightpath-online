@@ -6,69 +6,16 @@
   <title>BrightPath — Know what your child learned today</title>
   <meta name="description" content="BrightPath turns classroom lessons into short summaries for parents, so every family can follow along and help at home.">
   <link rel="icon" href="images/icon.png">
-  <style>
-    :root {
-      --brand: #1A36B4; /* logo background */
-      --primary: #1A36B4;
-      --primary-soft: #EEF0FF;
-      --text: #1B1B2F;
-      --muted: #5B5B72;
-      --bg: #FFFFFF;
-      --surface: #F7F7FB;
-      --border: #E4E4EE;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --primary: #A5B4FC;
-        --primary-soft: #25254A;
-        --text: #EDEDF5;
-        --muted: #A3A3BA;
-        --bg: #12121C;
-        --surface: #1B1B29;
-        --border: #2C2C40;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-    a { color: var(--primary); }
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
-    header { background: var(--brand); }
-    nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
-    .brand img { display: block; height: 44px; width: auto; }
-    .btn {
-      display: inline-block; padding: 12px 22px; border-radius: 10px;
-      background: var(--primary); color: var(--bg); font-weight: 600; text-decoration: none;
-    }
-    .btn.ghost { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
-    nav .btn { padding: 8px 16px; background: #fff; color: var(--brand); white-space: nowrap; }
-    .hero { padding: 80px 0 64px; text-align: center; }
-    .hero h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.1; margin: 0 0 18px; letter-spacing: -0.02em; }
-    .hero p { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 auto 32px; }
-    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    section { padding: 64px 0; }
-    section.alt { background: var(--surface); }
-    h2 { font-size: 32px; margin: 0 0 8px; text-align: center; }
-    .lead { text-align: center; color: var(--muted); margin: 0 auto 40px; max-width: 620px; }
-    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
-    section:not(.alt) .card { background: var(--surface); }
-    .card h3 { margin: 0 0 8px; font-size: 19px; }
-    .card p, .card li { color: var(--muted); margin: 0; }
-    .card ul { margin: 0; padding-left: 18px; }
-    .step { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
-            background: var(--primary-soft); color: var(--primary); font-weight: 700; margin-bottom: 12px; }
-    .team { text-align: center; }
-    .team img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 14px;
-                border: 4px solid var(--primary-soft); }
-    .cta { text-align: center; }
-    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 15px; }
-    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-  </style>
+  <link rel="canonical" href="https://brightpath-solutions.online/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BrightPath">
+  <meta property="og:title" content="BrightPath — Know what your child learned today">
+  <meta property="og:description" content="Short, clear summaries of every classroom lesson for parents, so families can follow along and help at home.">
+  <meta property="og:url" content="https://brightpath-solutions.online/">
+  <meta property="og:image" content="https://brightpath-solutions.online/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1A36B4">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -95,7 +42,7 @@
         <div class="grid">
           <div class="card"><h3>Stay in the loop</h3><p>See today's lessons, upcoming quizzes and school events in one place.</p></div>
           <div class="card"><h3>Help at home</h3><p>A weekly report shows what your child learned and simple ways to support them.</p></div>
-          <div class="card"><h3>Less work for teachers</h3><p>Lessons are summarized automatically. Teachers just review and publish.</p></div>
+          <div class="card"><h3>Less work for teachers</h3><p>Lessons are summarized automatically. Teachers only step in to edit.</p></div>
         </div>
       </div>
     </section>
@@ -106,8 +53,8 @@
         <p class="lead">From the classroom to a parent's phone, with the teacher in control.</p>
         <div class="grid">
           <div class="card"><div class="step">1</div><h3>Teach as usual</h3><p>A small BrightPath pendant worn by the teacher records the lesson.</p></div>
-          <div class="card"><div class="step">2</div><h3>AI summarizes</h3><p>The recording is transcribed, turned into a lesson summary draft, and the audio is deleted.</p></div>
-          <div class="card"><div class="step">3</div><h3>Teacher reviews</h3><p>The teacher checks and edits the summary before it goes out.</p></div>
+          <div class="card"><div class="step">2</div><h3>AI summarizes</h3><p>The recording is transcribed, turned into a lesson summary, and the audio is deleted.</p></div>
+          <div class="card"><div class="step">3</div><h3>Teacher stays in control</h3><p>The teacher can edit or archive any summary at any time.</p></div>
           <div class="card"><div class="step">4</div><h3>Parents are notified</h3><p>Parents get a notification and can read the lesson in the app.</p></div>
         </div>
       </div>
@@ -122,7 +69,7 @@
             <li>Lesson summaries by subject</li><li>Assignments, quizzes and exams</li>
             <li>Calendar and weekly report</li><li>Push notifications</li></ul></div>
           <div class="card"><h3>Teachers</h3><ul>
-            <li>Review AI lesson summaries</li><li>Post activities and events</li>
+            <li>Edit AI lesson summaries</li><li>Post activities and events</li>
             <li>Manage class rosters</li><li>Issue parent codes</li></ul></div>
           <div class="card"><h3>Schools</h3><ul>
             <li>Approve teachers and parents</li><li>Manage sections and classes</li>
@@ -179,7 +126,11 @@
   <footer>
     <div class="wrap">
       <span>&copy; 2026 BrightPath Solutions</span>
-      <a href="mailto:hello@brightpath-solutions.online">hello@brightpath-solutions.online</a>
+      <span class="links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:hello@brightpath-solutions.online">Contact</a>
+      </span>
     </div>
   </footer>
 </body>
