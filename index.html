@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrightPath — Know what your child learned today</title>
+  <meta name="description" content="BrightPath turns classroom lessons into short summaries for parents, so every family can follow along and help at home.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233730A3'/><path d='M9 22 16 9l7 13' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <style>
+    :root {
+      --primary: #3730A3;
+      --primary-soft: #EEF0FF;
+      --text: #1B1B2F;
+      --muted: #5B5B72;
+      --bg: #FFFFFF;
+      --surface: #F7F7FB;
+      --border: #E4E4EE;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #A5B4FC;
+        --primary-soft: #25254A;
+        --text: #EDEDF5;
+        --muted: #A3A3BA;
+        --bg: #12121C;
+        --surface: #1B1B29;
+        --border: #2C2C40;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--primary); }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    header { border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; color: var(--text); text-decoration: none; }
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 10px;
+      background: var(--primary); color: var(--bg); font-weight: 600; text-decoration: none;
+    }
+    .btn.ghost { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
+    nav .btn { padding: 8px 16px; }
+    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.1; margin: 0 0 18px; letter-spacing: -0.02em; }
+    .hero p { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 auto 32px; }
+    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    section { padding: 64px 0; }
+    section.alt { background: var(--surface); }
+    h2 { font-size: 32px; margin: 0 0 8px; text-align: center; }
+    .lead { text-align: center; color: var(--muted); margin: 0 auto 40px; max-width: 620px; }
+    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+    section:not(.alt) .card { background: var(--surface); }
+    .card h3 { margin: 0 0 8px; font-size: 19px; }
+    .card p, .card li { color: var(--muted); margin: 0; }
+    .card ul { margin: 0; padding-left: 18px; }
+    .step { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+            background: var(--primary-soft); color: var(--primary); font-weight: 700; margin-bottom: 12px; }
+    .cta { text-align: center; }
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: 15px; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="/">
+        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#3730A3"/><path d="M9 22 16 9l7 13" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        BrightPath
+      </a>
+      <a class="btn" href="https://app.brightpath-solutions.online">Open the app</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero wrap">
+      <h1>Know what your child<br>learned today.</h1>
+      <p>BrightPath turns each classroom lesson into a short, clear summary for parents, so every family can follow along and help at home.</p>
+      <div class="actions">
+        <a class="btn" href="https://app.brightpath-solutions.online">Open the web app</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+    </div>
+
+    <section class="alt" id="why">
+      <div class="wrap">
+        <h2>Why BrightPath</h2>
+        <p class="lead">"What did you learn today?" "Nothing." Parents want to help, but they rarely know what happened in class. BrightPath closes that gap between school and home.</p>
+        <div class="grid">
+          <div class="card"><h3>Stay in the loop</h3><p>See today's lessons, upcoming quizzes and school events in one place.</p></div>
+          <div class="card"><h3>Help at home</h3><p>A weekly report shows what your child learned and simple ways to support them.</p></div>
+          <div class="card"><h3>Less work for teachers</h3><p>Lessons are summarized automatically. Teachers just review and publish.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <p class="lead">From the classroom to a parent's phone, with the teacher in control.</p>
+        <div class="grid">
+          <div class="card"><div class="step">1</div><h3>Teach as usual</h3><p>A small BrightPath pendant worn by the teacher records the lesson.</p></div>
+          <div class="card"><div class="step">2</div><h3>AI summarizes</h3><p>The recording is transcribed, turned into a lesson summary draft, and the audio is deleted.</p></div>
+          <div class="card"><div class="step">3</div><h3>Teacher reviews</h3><p>The teacher checks and edits the summary before it goes out.</p></div>
+          <div class="card"><div class="step">4</div><h3>Parents are notified</h3><p>Parents get a notification and can read the lesson in the app.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="who">
+      <div class="wrap">
+        <h2>Built for the whole school</h2>
+        <p class="lead">One app, with the right tools for each role.</p>
+        <div class="grid">
+          <div class="card"><h3>Parents</h3><ul>
+            <li>Lesson summaries by subject</li><li>Assignments, quizzes and exams</li>
+            <li>Calendar and weekly report</li><li>Push notifications</li></ul></div>
+          <div class="card"><h3>Teachers</h3><ul>
+            <li>Review AI lesson summaries</li><li>Post activities and events</li>
+            <li>Manage class rosters</li><li>Issue parent codes</li></ul></div>
+          <div class="card"><h3>Schools</h3><ul>
+            <li>Approve teachers and parents</li><li>Manage sections and classes</li>
+            <li>Register recording pendants</li><li>Excel import and export</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust">
+      <div class="wrap">
+        <h2>Safe by design</h2>
+        <p class="lead">Built for children's data from day one.</p>
+        <div class="grid">
+          <div class="card"><h3>Linked by code</h3><p>Parents connect to their child only with a one-time code from the school.</p></div>
+          <div class="card"><h3>Audio is not kept</h3><p>Recordings are deleted right after they are transcribed.</p></div>
+          <div class="card"><h3>Nothing is lost</h3><p>Records are archived, never deleted, so school history stays intact.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt cta">
+      <div class="wrap">
+        <h2>Ready to get started?</h2>
+        <p class="lead">Use BrightPath in your browser on any phone or computer. Ask your school for your parent code to connect your child.</p>
+        <div class="actions">
+          <a class="btn" href="https://app.brightpath-solutions.online">Open the web app</a>
+          <a class="btn ghost" href="mailto:hello@brightpath-solutions.online">Bring BrightPath to your school</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 BrightPath Solutions</span>
+      <a href="mailto:hello@brightpath-solutions.online">hello@brightpath-solutions.online</a>
+    </div>
+  </footer>
+</body>
+</html>
