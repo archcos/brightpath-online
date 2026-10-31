@@ -1,0 +1,10 @@
+// Cloudflare Worker serving this folder as a static site.
+{
+  "name": "brightpath-online",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    // Unknown URLs get 404.html instead of Cloudflare's blank 404.
+    "not_found_handling": "404-page"
+  }
+}
