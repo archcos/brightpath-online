@@ -14,6 +14,9 @@
   --card: #FFFFFF;
   --border: #E3E6F3;
   --shadow: 0 1px 2px rgba(18, 20, 43, .04), 0 12px 32px -12px rgba(26, 54, 180, .18);
+  --band-a: rgba(59, 91, 255, .16);
+  --band-b: rgba(34, 195, 238, .18);
+  --band-base: #EEF2FF;
   --grad: linear-gradient(120deg, #1A36B4 0%, #3B5BFF 45%, #22C3EE 100%);
   color-scheme: light;
 }
@@ -29,6 +32,9 @@
     --card: #151938;
     --border: #262B55;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 16px 40px -16px rgba(0, 0, 0, .6);
+    --band-a: rgba(59, 91, 255, .5);
+    --band-b: rgba(34, 195, 238, .35);
+    --band-base: #0B1150;
     color-scheme: dark;
   }
 }
@@ -42,6 +48,9 @@
   --card: #151938;
   --border: #262B55;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 16px 40px -16px rgba(0, 0, 0, .6);
+  --band-a: rgba(59, 91, 255, .5);
+  --band-b: rgba(34, 195, 238, .35);
+  --band-base: #0B1150;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -61,12 +70,12 @@ img { max-width: 100%; }
 /* Header */
 header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(26, 54, 180, .92);
-  backdrop-filter: saturate(160%) blur(12px);
-  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  background: var(--brand); /* solid, so the logo's own #1A36B4 background blends in */
   transition: box-shadow .3s;
 }
 header.scrolled { box-shadow: 0 10px 30px -10px rgba(15, 31, 115, .5); }
+/* The header spans edge to edge instead of the 1180px content column. */
+header nav.wrap { max-width: none; padding: 0 clamp(20px, 4vw, 56px); }
 nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 12px; }
 .brand { min-width: 0; }
 .brand img { display: block; height: 44px; width: auto; object-fit: contain; }
@@ -299,16 +308,11 @@ section.alt .num { box-shadow: 0 0 0 8px var(--surface); }
 }
 .shot-nav button:hover { transform: translateY(-2px); background: var(--primary); color: #fff; }
 
-/* Trust band */
-.dark {
-  color: #fff; overflow: hidden;
-  background: radial-gradient(circle at 10% 0%, rgba(59, 91, 255, .5), transparent 40%), radial-gradient(circle at 90% 100%, rgba(34, 195, 238, .35), transparent 40%), #0B1150;
+/* Trust band: soft blue in light mode, deep navy in dark mode (--band-* tokens) */
+.band {
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 0%, var(--band-a), transparent 40%), radial-gradient(circle at 90% 100%, var(--band-b), transparent 40%), var(--band-base);
 }
-.dark .kicker { color: var(--sun); }
-.dark .lead { color: rgba(255, 255, 255, .72); }
-.dark .card { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .12); backdrop-filter: blur(6px); }
-.dark .card p { color: rgba(255, 255, 255, .72); }
-.dark .icon { background: rgba(255, 255, 255, .1); }
 
 /* Team */
 .team { text-align: center; overflow: hidden; }

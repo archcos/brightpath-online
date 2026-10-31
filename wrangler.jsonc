@@ -1,9 +1,11 @@
 // Cloudflare Worker serving this folder as a static site, plus the contact form (worker.js).
-// Set in the dashboard (Settings → Variables and secrets): CONTACT_TO (text) and TURNSTILE_SECRET (secret).
+// Set in the dashboard (Settings → Variables and secrets): CONTACT_TO and TURNSTILE_SECRET, both as Secret.
 {
   "name": "brightpath-online",
   "main": "worker.js",
   "compatibility_date": "2026-10-01",
+  // Keep variables added in the dashboard; otherwise every deploy deletes non-secret ones.
+  "keep_vars": true,
   "assets": {
     "directory": "./",
     "binding": "ASSETS",
