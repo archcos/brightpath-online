@@ -17,8 +17,11 @@ async function turnstileOk(token, ip, secret) {
       body: new URLSearchParams({ secret, response: token, remoteip: ip ?? '' }),
       signal: AbortSignal.timeout(10_000),
     });
-    return (await r.json()).success === true;
-  } catch {
+    const result = await r.json();
+    if (!result.success) console.error('turnstile rejected', result['error-codes'], result.hostname);
+    return result.success === true;
+  } catch (e) {
+    console.error('turnstile unreachable', e.message);
     return false;
   }
 }
