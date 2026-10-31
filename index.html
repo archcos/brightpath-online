@@ -16,95 +16,249 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1A36B4">
   <link rel="stylesheet" href="style.css">
+  <script src="/theme.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
   <header>
     <nav class="wrap">
       <a class="brand" href="/"><img src="images/logo.jpg" alt="BrightPath Assistant" width="164" height="44"></a>
-      <a class="btn" href="https://app.brightpath-solutions.online">Open the app</a>
+      <div class="nav-links">
+        <a href="#why">Why BrightPath</a>
+        <a href="#how">How it works</a>
+        <a href="#screens">Screens</a>
+        <a href="#team">Team</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" hidden></button>
+        <a class="btn" href="https://app.brightpath-solutions.online">Open the app</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <div class="hero wrap">
-      <h1>Know what your child<br>learned today.</h1>
-      <p>BrightPath turns each classroom lesson into a short, clear summary for parents, so every family can follow along and help at home.</p>
-      <div class="actions">
-        <a class="btn" href="https://app.brightpath-solutions.online">Open the web app</a>
-        <a class="btn ghost" href="#how">How it works</a>
+    <div class="hero hero-home">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <div class="wrap">
+        <div>
+          <span class="eyebrow fade-up"><b>New</b> AI lesson summaries for every class</span>
+          <h1 class="fade-up" style="--d:.1s">Know what your child <span class="grad-text">learned</span> <span class="hl">today.</span></h1>
+          <p class="fade-up" style="--d:.2s">BrightPath turns each classroom lesson into a short, clear summary for parents, so every family can follow along and help at home.</p>
+          <div class="actions fade-up" style="--d:.3s">
+            <a class="btn glow" href="https://app.brightpath-solutions.online">Open the web app <span class="arrow">→</span></a>
+            <a class="btn ghost" href="#how">How it works</a>
+          </div>
+          <ul class="checks fade-up" style="--d:.4s">
+            <li>One-time parent codes</li><li>Works on any phone or browser</li><li>Audio never kept</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual fade-up" style="--d:.25s">
+          <div class="toast t1"><span class="ico">✨</span><div><b>New lesson summary ready</b><span>Science — Parts of a Plant</span></div></div>
+          <div class="toast t2"><span class="ico">📝</span><div><b>Due tomorrow</b><span>Draw and Label a Plant</span></div></div>
+          <div class="toast t3"><span class="ico">💬</span><div><b>Ask your child</b><span>"What are the main parts of a plant?"</span></div></div>
+          <div class="phone" role="img" aria-label="BrightPath app home screen showing Sofia's lessons for today">
+            <div class="screen">
+              <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+              <div class="s-row">
+                <div class="grow"><span class="sub">Good morning, Maria 👋</span><h4>Sofia's day</h4></div>
+                <span class="bell">🔔<i>2</i></span>
+              </div>
+              <div class="kids"><span>👧 Sofia</span><span>👦 Miguel</span></div>
+              <div class="s-stats">
+                <div class="s-card"><span>📘</span><strong>6</strong><span class="sub">Lessons Today</span></div>
+                <div class="s-card"><span>📝</span><strong>7</strong><span class="sub">Tasks Due</span></div>
+              </div>
+              <h5>Needs Attention</h5>
+              <div class="s-card s-row"><span class="bar" style="background:#3B82F6"></span><div class="grow"><b>Fractions Practice Worksheet</b><span class="sub">Mathematics · Mr. Cruz</span></div><span class="chip bad">Overdue</span></div>
+              <h5>Today's Learning <small>See All</small></h5>
+              <div class="s-card s-row"><span class="s-ico" style="background:#DCFCE7">🌱</span><div class="grow"><b>Parts of a Plant</b><span class="sub">Science · 9:00 AM</span></div></div>
+              <div class="s-card s-row"><span class="s-ico" style="background:#DBEAFE">🍕</span><div class="grow"><b>Introduction to Fractions</b><span class="sub">Mathematics · 10:15 AM</span></div></div>
+              <div class="tabbar"><span class="on"><em>🏠</em>Home</span><span><em>📘</em>Lessons</span><span><em>📝</em>Activities</span><span><em>📅</em>Calendar</span><span><em>👤</em>Profile</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <section class="alt" id="why">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Mathematics</span><span>Science</span><span>English</span><span>Filipino</span><span>Araling Panlipunan</span><span>MAPEH</span><span>GMRC</span><span>Quizzes &amp; Exams</span><span>School Events</span>
+        <span>Mathematics</span><span>Science</span><span>English</span><span>Filipino</span><span>Araling Panlipunan</span><span>MAPEH</span><span>GMRC</span><span>Quizzes &amp; Exams</span><span>School Events</span>
+      </div>
+    </div>
+
+    <section id="why">
       <div class="wrap">
-        <h2>Why BrightPath</h2>
-        <p class="lead">"What did you learn today?" "Nothing." Parents want to help, but they rarely know what happened in class. BrightPath closes that gap between school and home.</p>
-        <div class="grid">
-          <div class="card"><h3>Stay in the loop</h3><p>See today's lessons, upcoming quizzes and school events in one place.</p></div>
-          <div class="card"><h3>Help at home</h3><p>A weekly report shows what your child learned and simple ways to support them.</p></div>
-          <div class="card"><h3>Less work for teachers</h3><p>Lessons are summarized automatically. Teachers only step in to edit.</p></div>
+        <span class="kicker reveal">Why BrightPath</span>
+        <h2 class="reveal">Close the gap between<br>school and home</h2>
+        <p class="lead reveal">Parents want to help, but they rarely know what happened in class. BrightPath gives every family the full picture.</p>
+        <div class="bento">
+          <div class="card quote reveal">
+            <div>
+              <span class="bubble">"What did you learn today?"</span>
+              <span class="bubble kid">"Nothing."</span>
+            </div>
+            <div>
+              <h3>Sound familiar?</h3>
+              <p>With BrightPath, you already know the answer — and the right questions to ask at dinner.</p>
+            </div>
+          </div>
+          <div class="card reveal" style="--d:.1s"><div class="icon">👀</div><h3>Stay in the loop</h3><p>See today's lessons, upcoming quizzes and school events in one place.</p></div>
+          <div class="card reveal" style="--d:.2s"><div class="icon">🏡</div><h3>Help at home</h3><p>A weekly report shows what your child learned and simple ways to support them.</p></div>
+          <div class="card wide reveal" style="--d:.3s"><div class="icon">⏱️</div><div><h3>Less work for teachers</h3><p>Lessons are summarized automatically. Teachers keep teaching and only step in to edit when they want to.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section id="how">
+    <section class="alt" id="how">
       <div class="wrap">
-        <h2>How it works</h2>
-        <p class="lead">From the classroom to a parent's phone, with the teacher in control.</p>
-        <div class="grid">
-          <div class="card"><div class="step">1</div><h3>Teach as usual</h3><p>A small BrightPath pendant worn by the teacher records the lesson.</p></div>
-          <div class="card"><div class="step">2</div><h3>AI summarizes</h3><p>The recording is transcribed, turned into a lesson summary, and the audio is deleted.</p></div>
-          <div class="card"><div class="step">3</div><h3>Teacher stays in control</h3><p>The teacher can edit or archive any summary at any time.</p></div>
-          <div class="card"><div class="step">4</div><h3>Parents are notified</h3><p>Parents get a notification and can read the lesson in the app.</p></div>
+        <span class="kicker reveal">How it works</span>
+        <h2 class="reveal">From the classroom to a<br>parent's phone</h2>
+        <p class="lead reveal">Four simple steps, with the teacher in control the whole way.</p>
+        <div class="steps reveal">
+          <div class="card"><div class="num">🎙️</div><h3>Teach as usual</h3><p>A small BrightPath pendant worn by the teacher records the lesson.</p></div>
+          <div class="card"><div class="num">✨</div><h3>AI summarizes</h3><p>The recording is transcribed, turned into a lesson summary, and the audio is deleted.</p></div>
+          <div class="card"><div class="num">✍️</div><h3>Teacher stays in control</h3><p>The teacher can edit or archive any summary at any time.</p></div>
+          <div class="card"><div class="num">🔔</div><h3>Parents are notified</h3><p>Parents get a notification and can read the lesson in the app.</p></div>
         </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <div class="wrap">
+        <span class="kicker reveal">See it in action</span>
+        <h2 class="reveal">A peek inside the app</h2>
+        <p class="lead reveal">Everything a parent needs, one tap away. Screens from the BrightPath app, shown with demo data.</p>
+      </div>
+      <div class="shots" tabindex="0" aria-label="App screens, use the arrow keys to browse">
+        <figure class="shot reveal">
+          <div class="phone" role="img" aria-label="Lesson summary screen for Parts of a Plant">
+            <div class="screen">
+              <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+              <span class="sub">‹ Lessons</span>
+              <div class="chips"><span class="chip ok">🌱 Science</span><span class="chip ai">✨ AI Lesson Summary</span></div>
+              <h4>Parts of a Plant</h4>
+              <span class="sub">Mrs. Santos · 9:00 AM · 32 min</span>
+              <div class="s-card"><b>What They Learned</b><p>The class learned about the different parts of plants and how each part helps the plant survive.</p></div>
+              <div class="s-card"><b>Key Learning Points</b><p>🌱 Roots absorb water and nutrients.<br>🌿 Stems move water upward.<br>🍃 Leaves make food using sunlight.</p></div>
+              <div class="s-card"><b>Important Words</b><div class="chips" style="margin-top:6px"><span class="chip">Photosynthesis</span><span class="chip">Roots</span><span class="chip">Stem</span><span class="chip">Pollination</span></div></div>
+              <div class="s-card s-note"><b>💡 Remember This</b><p>Every part of a plant has a special job.</p></div>
+            </div>
+          </div>
+          <figcaption><b>Lesson summaries</b><span>What they learned, in plain words</span></figcaption>
+        </figure>
+
+        <figure class="shot reveal" style="--d:.1s">
+          <div class="phone" role="img" aria-label="Activities screen listing homework, quizzes and projects">
+            <div class="screen">
+              <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+              <h4>Activities</h4>
+              <div class="chips"><span class="chip" style="background:#3730A3;color:#fff">Upcoming</span><span class="chip">Overdue</span><span class="chip">Completed</span></div>
+              <div class="s-card s-row"><span class="bar" style="background:#22C55E"></span><div class="grow"><b>Draw and Label a Plant</b><span class="sub">Science · Assignment</span></div><span class="chip warn">Today</span></div>
+              <div class="s-card s-row"><span class="bar" style="background:#22C55E"></span><div class="grow"><b>Bring 3 Types of Leaves</b><span class="sub">Science · Activity</span></div><span class="chip">Tomorrow</span></div>
+              <div class="s-card s-row"><span class="bar" style="background:#F97316"></span><div class="grow"><b>Pangngalan Practice</b><span class="sub">Filipino · Homework</span></div><span class="chip">2 days</span></div>
+              <div class="s-card s-row"><span class="bar" style="background:#A855F7"></span><div class="grow"><b>Nouns and Pronouns Quiz</b><span class="sub">English · Review suggested</span></div><span class="chip">3 days</span></div>
+              <div class="s-card s-row"><span class="bar" style="background:#EC4899"></span><div class="grow"><b>Color Emotion Painting</b><span class="sub">MAPEH · Project</span></div><span class="chip">5 days</span></div>
+              <div class="tabbar"><span><em>🏠</em>Home</span><span><em>📘</em>Lessons</span><span class="on"><em>📝</em>Activities</span><span><em>📅</em>Calendar</span><span><em>👤</em>Profile</span></div>
+            </div>
+          </div>
+          <figcaption><b>Homework &amp; quizzes</b><span>Never miss a due date again</span></figcaption>
+        </figure>
+
+        <figure class="shot reveal" style="--d:.2s">
+          <div class="phone" role="img" aria-label="Calendar screen with school events for November">
+            <div class="screen">
+              <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+              <h4>Calendar</h4>
+              <h5>November 2026 <small>‹ ›</small></h5>
+              <div class="s-card">
+                <div class="cal">
+                  <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b>
+                  <span class="muted">26</span><span class="muted">27</span><span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span class="muted">31</span><span class="today">1</span>
+                  <span class="dot" style="--c:#22C55E">2</span><span class="dot" style="--c:#F97316">3</span><span class="dot" style="--c:#A855F7">4</span><span class="dot" style="--c:#22C55E">5</span><span class="dot" style="--c:#EC4899">6</span><span>7</span><span>8</span>
+                  <span class="dot" style="--c:#EAB308">9</span><span>10</span><span class="dot" style="--c:#A855F7">11</span><span class="dot" style="--c:#22C55E">12</span><span>13</span><span>14</span><span class="dot" style="--c:#EC4899">15</span>
+                  <span>16</span><span>17</span><span class="dot">18</span><span>19</span><span class="dot" style="--c:#EAB308">20</span><span>21</span><span class="dot" style="--c:#EAB308">22</span>
+                </div>
+              </div>
+              <h5>Coming up</h5>
+              <div class="s-card s-row"><span class="s-ico" style="background:#DCFCE7">🔬</span><div class="grow"><b>Science Fair</b><span class="sub">Nov 12 · Families welcome</span></div></div>
+              <div class="s-card s-row"><span class="s-ico" style="background:#FEF3C7">🤝</span><div class="grow"><b>Parent–Teacher Meeting</b><span class="sub">Nov 20 · First quarter</span></div></div>
+              <div class="tabbar"><span><em>🏠</em>Home</span><span><em>📘</em>Lessons</span><span><em>📝</em>Activities</span><span class="on"><em>📅</em>Calendar</span><span><em>👤</em>Profile</span></div>
+            </div>
+          </div>
+          <figcaption><b>School calendar</b><span>Events, exams and field trips</span></figcaption>
+        </figure>
+
+        <figure class="shot reveal" style="--d:.3s">
+          <div class="phone" role="img" aria-label="Notifications screen">
+            <div class="screen">
+              <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+              <span class="sub">‹ Home</span>
+              <h4>Notifications</h4>
+              <div class="s-card s-row"><span class="s-ico" style="background:#F3E8FF">✨</span><div class="grow"><b>New lesson summary ready</b><span class="sub">Sofia's Science lesson summary is ready.</span></div></div>
+              <div class="s-card s-row"><span class="s-ico" style="background:#FEF3C7">⏰</span><div class="grow"><b>Assignment due tomorrow</b><span class="sub">Science — Draw and Label a Plant</span></div></div>
+              <div class="s-card s-row"><span class="s-ico" style="background:#EEF0FF">📋</span><div class="grow"><b>Quiz reminder</b><span class="sub">English quiz is in 3 days.</span></div></div>
+              <div class="s-card s-row"><span class="s-ico" style="background:#DCFCE7">✅</span><div class="grow"><b>Assignment completed</b><span class="sub">Math shapes worksheet done.</span></div></div>
+              <div class="s-card s-row"><span class="s-ico" style="background:#FCE7F3">📊</span><div class="grow"><b>Weekly summary ready</b><span class="sub">See what Sofia learned this week.</span></div></div>
+            </div>
+          </div>
+          <figcaption><b>Instant updates</b><span>Push notifications that matter</span></figcaption>
+        </figure>
+      </div>
+      <div class="shot-nav" hidden>
+        <button type="button" aria-pressed="false">❚❚ Pause</button>
       </div>
     </section>
 
     <section class="alt" id="who">
       <div class="wrap">
-        <h2>Built for the whole school</h2>
-        <p class="lead">One app, with the right tools for each role.</p>
+        <span class="kicker reveal">Built for the whole school</span>
+        <h2 class="reveal">One app, the right tools<br>for every role</h2>
+        <p class="lead reveal">Parents, teachers and school admins each get exactly what they need.</p>
         <div class="grid">
-          <div class="card"><h3>Parents</h3><ul>
+          <div class="card reveal"><div class="icon">👨‍👩‍👧</div><h3>Parents</h3><ul>
             <li>Lesson summaries by subject</li><li>Assignments, quizzes and exams</li>
             <li>Calendar and weekly report</li><li>Push notifications</li></ul></div>
-          <div class="card"><h3>Teachers</h3><ul>
+          <div class="card reveal" style="--d:.1s"><div class="icon">👩‍🏫</div><h3>Teachers</h3><ul>
             <li>Edit AI lesson summaries</li><li>Post activities and events</li>
             <li>Manage class rosters</li><li>Issue parent codes</li></ul></div>
-          <div class="card"><h3>Schools</h3><ul>
+          <div class="card reveal" style="--d:.2s"><div class="icon">🏫</div><h3>Schools</h3><ul>
             <li>Approve teachers and parents</li><li>Manage sections and classes</li>
             <li>Register recording pendants</li><li>Excel import and export</li></ul></div>
         </div>
       </div>
     </section>
 
-    <section id="trust">
+    <section class="dark" id="trust">
       <div class="wrap">
-        <h2>Safe by design</h2>
-        <p class="lead">Built for children's data from day one.</p>
+        <span class="kicker reveal">Safe by design</span>
+        <h2 class="reveal">Built for children's data<br>from day one</h2>
+        <p class="lead reveal">Privacy isn't a setting. It's how BrightPath works.</p>
         <div class="grid">
-          <div class="card"><h3>Linked by code</h3><p>Parents connect to their child only with a one-time code from the school.</p></div>
-          <div class="card"><h3>Audio is not kept</h3><p>Recordings are deleted right after they are transcribed.</p></div>
-          <div class="card"><h3>Nothing is lost</h3><p>Records are archived, never deleted, so school history stays intact.</p></div>
+          <div class="card reveal"><div class="icon">🔐</div><h3>Linked by code</h3><p>Parents connect to their child only with a one-time code from the school.</p></div>
+          <div class="card reveal" style="--d:.1s"><div class="icon">🗑️</div><h3>Audio is not kept</h3><p>Recordings are deleted right after they are transcribed.</p></div>
+          <div class="card reveal" style="--d:.2s"><div class="icon">🗄️</div><h3>Nothing is lost</h3><p>Records are archived, never deleted, so school history stays intact.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="alt" id="team">
+    <section id="team">
       <div class="wrap">
-        <h2>Meet the team</h2>
-        <p class="lead">The people building BrightPath, from the pendant hardware to the app.</p>
+        <span class="kicker reveal">Meet the team</span>
+        <h2 class="reveal">The people behind BrightPath</h2>
+        <p class="lead reveal">From the pendant hardware to the app.</p>
         <div class="grid">
-          <div class="card team">
-            <img src="images/mark-anthony-galon.png" alt="Mark Anthony Galon" width="140" height="140" loading="lazy">
+          <div class="card team reveal">
+            <img src="images/mark-anthony-galon.png" alt="Mark Anthony Galon" width="132" height="132" loading="lazy">
             <h3>Mark Anthony Galon</h3><p>Hardware, Firmware and Pilot Lead</p>
           </div>
-          <div class="card team">
-            <img src="images/rodrigo-galon.jpg" alt="Rodrigo Galon" width="140" height="140" loading="lazy">
+          <div class="card team reveal" style="--d:.1s">
+            <img src="images/rodrigo-galon.jpg" alt="Rodrigo Galon" width="132" height="132" loading="lazy">
             <h3>Rodrigo Galon</h3><p>Hardware, Firmware and 3D Modeling</p>
           </div>
-          <div class="card team">
-            <img src="images/arjay-charcos.webp" alt="Arjay Charcos" width="140" height="140" loading="lazy">
+          <div class="card team reveal" style="--d:.2s">
+            <img src="images/arjay-charcos.webp" alt="Arjay Charcos" width="132" height="132" loading="lazy">
             <h3>Arjay Charcos</h3><p>Mobile App and Software</p>
           </div>
         </div>
@@ -113,12 +267,54 @@
 
     <section class="cta">
       <div class="wrap">
-        <h2>Ready to get started?</h2>
-        <p class="lead">Use BrightPath in your browser on any phone or computer. Ask your school for your parent code to connect your child.</p>
-        <div class="actions">
-          <a class="btn" href="https://app.brightpath-solutions.online">Open the web app</a>
-          <a class="btn ghost" href="mailto:hello@brightpath-solutions.online">Bring BrightPath to your school</a>
+        <div class="cta-box reveal">
+          <h2>Ready to get started?</h2>
+          <p class="lead">Use BrightPath in your browser on any phone or computer. Ask your school for your parent code to connect your child.</p>
+          <div class="actions">
+            <a class="btn" href="https://app.brightpath-solutions.online">Open the web app <span class="arrow">→</span></a>
+            <a class="btn ghost" href="#contact">Bring BrightPath to your school</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="alt" id="contact">
+      <div class="wrap">
+        <h2>Contact us</h2>
+        <p class="lead">Interested in BrightPath for your school, or have a question? Send us a message and we'll reply by email.</p>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-topic">I'm asking about</label>
+            <select id="cf-topic" name="topic">
+              <option value="school" selected>Bringing BrightPath to my school</option>
+              <option value="parent">A question as a parent</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="cf-name">Your name</label>
+              <input id="cf-name" name="name" autocomplete="name" maxlength="100" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Your email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-school">School <span class="opt">(optional)</span></label>
+            <input id="cf-school" name="school" autocomplete="organization" maxlength="150">
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" maxlength="5000" required placeholder="Tell us about your school and what you'd like to know."></textarea>
+          </div>
+          <!-- Turnstile site key (public); its secret key is the TURNSTILE_SECRET setting on the Worker. -->
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAFuN_ta8nuRkVyqe" data-theme="auto"></div>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-alt">Prefer email? Write to <a href="mailto:contact@brightpath-solutions.online">contact@brightpath-solutions.online</a></p>
+        </form>
       </div>
     </section>
   </main>
@@ -129,9 +325,84 @@
       <span class="links">
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
-        <a href="mailto:hello@brightpath-solutions.online">Contact</a>
+        <a href="#contact">Contact</a>
       </span>
     </div>
   </footer>
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    const contactStatus = contactForm.querySelector('.form-status');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!contactForm.reportValidity()) return;
+      const button = contactForm.querySelector('button[type=submit]');
+      button.disabled = true;
+      contactStatus.className = 'form-status';
+      contactStatus.textContent = 'Sending…';
+      try {
+        const res = await fetch('/api/contact', { method: 'POST', body: new FormData(contactForm) });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Your message could not be sent. Please try again.');
+        contactForm.reset();
+        contactStatus.classList.add('ok');
+        contactStatus.textContent = "Thanks! Your message was sent. We'll reply to your email soon.";
+      } catch (err) {
+        contactStatus.classList.add('error');
+        contactStatus.textContent = err.message;
+      } finally {
+        window.turnstile?.reset(); // each token works once
+        button.disabled = false;
+      }
+    });
+  </script>
+  <script>
+    const header = document.querySelector('header');
+    addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), { passive: true });
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // Screens carousel: arrow buttons, arrow keys and auto-slide, only when the phones don't all fit.
+    const shots = document.querySelector('.shots');
+    const shotNav = document.querySelector('.shot-nav');
+    const overflows = () => shots.scrollWidth > shots.clientWidth + 4;
+    const mid = (el) => { const r = el.getBoundingClientRect(); return r.left + r.width / 2; };
+    const items = [...shots.children];
+    const nearest = () => {
+      const dist = (el) => Math.abs(mid(el) - mid(shots));
+      return items.reduce((best, el, i) => (dist(el) < dist(items[best]) ? i : best), 0);
+    };
+    // Track the target screen so quick presses don't read a half-finished scroll; resync after any scroll settles.
+    let current = 0, settle;
+    shots.addEventListener('scroll', () => { clearTimeout(settle); settle = setTimeout(() => { current = nearest(); }, 150); }, { passive: true });
+    const step = (dir) => {
+      current = (current + dir + items.length) % items.length; // wraps around at either end
+      shots.scrollBy({ left: mid(items[current]) - mid(shots), behavior: 'smooth' });
+    };
+    const fit = () => { shotNav.hidden = !overflows(); };
+    fit();
+    addEventListener('resize', fit);
+    let shotsInView = false, paused = false, stopped = false;
+    const toggle = shotNav.querySelector('button');
+    toggle.addEventListener('click', () => {
+      stopped = !stopped;
+      toggle.setAttribute('aria-pressed', stopped);
+      toggle.textContent = stopped ? '▶ Play' : '❚❚ Pause';
+    });
+    new IntersectionObserver(([e]) => { shotsInView = e.isIntersecting; }).observe(shots);
+    addEventListener('keydown', (e) => {
+      if (!shotsInView || !overflows() || e.target.closest?.('input, textarea, select')) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); step(e.key === 'ArrowRight' ? 1 : -1); }
+    });
+    // Hovering with a mouse pauses too; touch pointers fire enter/leave per tap, so skip them.
+    shots.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') paused = true; });
+    shots.addEventListener('pointerleave', () => { paused = false; });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setInterval(() => { if (shotsInView && !paused && !stopped && !document.hidden && overflows()) step(1); }, 3500);
+    }
+  </script>
 </body>
 </html>
